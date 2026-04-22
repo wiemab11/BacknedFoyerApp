@@ -1,7 +1,6 @@
 package foyer.controllers;
 
 import foyer.entities.Chambre;
-import foyer.entities.TypeChambre;
 import foyer.services.IChambreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +35,4 @@ public class ChambreController {
         chambreService.deleteById(id);
     }
 
-    // Add other endpoints as needed
 }

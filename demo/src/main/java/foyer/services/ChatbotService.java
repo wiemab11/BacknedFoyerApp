@@ -15,10 +15,10 @@ public class ChatbotService {
 
     private final BlocRepository blocRepo;
 
-    // Remplacer par votre clé API OpenAI / Gemini
+    // pour les tests, vous pouvez laisser la clé API vide ou utiliser une clé de test
     private static final String API_KEY = "VOTRE_CLE_API_ICI";
     private static final String OPENAI_URL = "https://api.openai.com/v1/chat/completions";
-
+    // Méthode principale pour obtenir une réponse du chatbot
     public String getReponse(String question) {
         // 1. Récupérer le contexte depuis la base de données
         List<Bloc> blocs = blocRepo.findAll();
@@ -71,7 +71,7 @@ public class ChatbotService {
         return genererReponseLocale(question, contexte);
     }
 
-    // Réponse locale sans API (pour les tests)
+    // Méthode de secours pour générer une réponse locale basée sur des règles simples
     private String genererReponseLocale(String question, String contexte) {
         String q = question.toLowerCase();
         if (q.contains("chambre") || q.contains("disponible")) {

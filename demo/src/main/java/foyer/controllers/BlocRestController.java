@@ -1,10 +1,10 @@
 package foyer.controllers;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import foyer.entities.Bloc;
 import foyer.services.IBlocService;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/bloc")
